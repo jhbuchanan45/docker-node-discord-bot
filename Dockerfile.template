@@ -1,0 +1,5 @@
+FROM balenalib/%%BALENA_MACHINE_NAME%%-alpine-node:13.9
+
+WORKDIR /bot-files
+
+COPY *.sh ./
