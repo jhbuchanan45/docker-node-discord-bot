@@ -11,7 +11,7 @@ WORKDIR /bot-files
 COPY ./*.sh /bot-files
 
 RUN git clone https://github.com/BobertoBobert/QUB-Computing-Discord.git
-RUN mv /bot-files/QUB-Computing-Discord/* /bot-files/QUB-Computing-Discord/.* /bot-files
+RUN cp -r /bot-files/QUB-Computing-Discord/. /bot-files
 RUN rm ./QUB-Computing-Discord
 RUN chmod -R 774 /bot-files
 RUN ./nodeinstall.sh 
