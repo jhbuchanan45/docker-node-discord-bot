@@ -12,7 +12,7 @@ COPY ./*.sh /bot-files
 
 RUN git clone https://github.com/BobertoBobert/QUB-Computing-Discord.git
 RUN cp -r /bot-files/QUB-Computing-Discord/. /bot-files
-RUN rm ./QUB-Computing-Discord
+RUN rm -r ./QUB-Computing-Discord/*
 RUN chmod -R 774 /bot-files
 RUN ./nodeinstall.sh 
 
