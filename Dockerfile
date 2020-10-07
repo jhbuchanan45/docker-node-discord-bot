@@ -11,9 +11,7 @@ WORKDIR /bot-files
 # COPY ./*.sh /bot-files
 
 # clones only main (production branch)
-RUN git clone --single-branch main https://github.com/BobertoBobert/QUB-Computing-Discord.git
-RUN cp -r /bot-files/QUB-Computing-Discord/. /bot-files
-RUN rm -r ./QUB-Computing-Discord/*
+RUN git clone --branch main --single-branch https://github.com/BobertoBobert/QUB-Computing-Discord.git /bot-files
 RUN chmod -R 774 /bot-files
 RUN npm install
 
