@@ -8,7 +8,7 @@ VOLUME "/bot-files"
 
 WORKDIR /bot-files
 # bundle scripts for bot (now in bot source)
-COPY ./*.sh /bot-files
+# COPY ./*.sh /bot-files
 
 RUN git clone https://github.com/BobertoBobert/QUB-Computing-Discord.git
 RUN cp -r /bot-files/QUB-Computing-Discord/. /bot-files
