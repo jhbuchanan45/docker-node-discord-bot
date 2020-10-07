@@ -10,7 +10,8 @@ WORKDIR /bot-files
 # bundle scripts for bot (now in bot source)
 # COPY ./*.sh /bot-files
 
-RUN git clone https://github.com/BobertoBobert/QUB-Computing-Discord.git
+# clones only main (production branch)
+RUN git clone --single-branch main https://github.com/BobertoBobert/QUB-Computing-Discord.git
 RUN cp -r /bot-files/QUB-Computing-Discord/. /bot-files
 RUN rm -r ./QUB-Computing-Discord/*
 RUN chmod -R 774 /bot-files
